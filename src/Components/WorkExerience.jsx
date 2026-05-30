@@ -1,23 +1,33 @@
-export function WorkExperience() {
+export function WorkExperienceData({value, onChange, CreateInput, CreateButton, save, onClick}) {
     return (
-        <section>
-            <div className="work-experience">
-                <h1>Work experience</h1>
-            </div>
-            <label htmlFor="experience1">work experience #1</label>
-            <input type="text" name="company" id="experience1"  placeholder="Company name"/>
-            <input type="text" name="job" id="experience1" placeholder="Job title" />
-            <input type="text" name="country"  id="experience1" placeholder="Country"/>
-            <input type="text" name="responsibilities" id="experience1" placeholder="Responsibilities" />
-            <input type="text" name="from" id="experience1" placeholder="From"/>
-            <input type="text" name="present" id="experience1" placeholder="To"/>
-            <div>
+        <section className="work-experience-section">
+           <form action=""  onSubmit={(e) => e.preventDefault()}>
+                <div className="work-experience">
+                        <h1>Work experience</h1>
+                    </div>
+
+                <CreateInput value={value.companyName} type="text" name="companyName" id="companyName"  placeholder="Company name" 
+                onChange={onChange} text="work experience #1" />
             
-            <input type="checkbox"  id="checkbox experience1" name="present" />
-            <label htmlFor="checkbox">I currently work here </label>
-            <button type="submit">Save</button>
-            </div>
-             
+                <CreateInput value={value.jobTitle} type="text" name="jobTitle" id="jobTitle" placeholder="Job title" onChange={onChange} />
+                <CreateInput value={value.country} type="text" name="country"  id="location" placeholder="Country" onChange={onChange} />
+                <CreateInput value={value.responsibilities} type="text" name="responsibilities" id="responsibilities" placeholder="Responsibilities" onChange={onChange} />
+                <CreateInput value={value.from} type="text" name="from" id="workExperienceFrom" placeholder="From" onChange={onChange} />
+                <CreateInput  value={value.to} type="text" name="to" id="workExperiencTo" placeholder="To" onChange={onChange} />
+                <div className="current-job-div">
+                
+                <input value={value.present} type="checkbox"  id="currentJob" name="present" onChange={onChange} />
+                <label htmlFor="currentJob">I currently work here </label>
+                
+                </div>
+                
+                <div className="buttons">
+                    < CreateButton onClick={save} />
+                    < CreateButton text='Edit' onClick={onClick} />
+
+                </div>
+
+           </form>
         </section>
     )
 }

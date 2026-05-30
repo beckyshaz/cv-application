@@ -9,6 +9,33 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.personal-info {
+    border: 2px solid black;
+}
+
+.personal-info h1 {
+    font-size: 30px;
+}
+
+.first-name, .second-name, .email, .birth-date, 
+.nationality, .postal, .address, .phone-number, .country {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.first-name input, .second-name input, .email input, .birth-date input, 
+.nationality input, .postal input, .address input, .phone-number input, .country input {
+    width: 300px;
+    background-color: yellow;
+    
+}
+
+.personal-info label {
+    align-self: flex-start;
+}
+
 .preview {
     background-color: aliceblue;
 }
