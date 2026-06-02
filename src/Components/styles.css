@@ -9,12 +9,32 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.personal-info {
+
+
+.personal-info, .education-info, .work-info {
     border: 2px solid black;
+    
 }
 
-.personal-info h1 {
+.education-info, .work-info {
+    margin-top: 20px;
+}
+
+
+.personal-info h1, .education-info h1, .work-info h1 {
     font-size: 30px;
+}
+
+.names, .contacts {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 50px;
+    
+}
+
+.contacts, .country {
+    padding-top: 10px;
 }
 
 .first-name, .second-name, .email, .birth-date, 
@@ -27,8 +47,15 @@
 
 .first-name input, .second-name input, .email input, .birth-date input, 
 .nationality input, .postal input, .address input, .phone-number input, .country input {
-    width: 300px;
-    background-color: yellow;
+    padding: 1em;
+    width: 250px;
+    
+}
+
+.first-name input:hover, .second-name input:hover, .email input:hover, .birth-date input:hover, 
+.nationality input:hover, .postal input:hover, .address input:hover, .phone-number input:hover, .country input:hover {
+    border: 2px solid red;
+    background-color: aquamarine;
     
 }
 
@@ -36,6 +63,94 @@
     align-self: flex-start;
 }
 
+
+.education-info input, .work-info input{
+    padding: 1em;
+    
+}
+
+.education-info input:hover, .work-info input:hover{
+    
+    background-color: aquamarine;
+    border: 2px solid red;
+}
+
+
+.field-level-container, .job-title-responsibilities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+    padding-top: 10px;
+
+}
+.from-to-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+   /* background-color: aqua;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.buttons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.editBtn, .saveBtn {
+    padding: 1.5em;
+    width: 100px;
+    background-color: steelblue;
+    color: azure;
+    
+
+}
+
+.editBtn:hover, .saveBtn:hover {
+    background-color: rgb(90, 159, 219);
+}
+
+.editBtn:active, .saveBtn:active {
+    border: 2px solid gainsboro;
+    outline: 2px solid red;
+}
+
+
+
 .preview {
     background-color: aliceblue;
+}
+
+/*.data-container {
+    border-bottom: 2px dotted gray;
+}*/
+
+.icon-title-container {
+    display: flex;
+    border-bottom: 2px solid gray;
+    font-size: 0.6em;
+}
+
+.data-container p,  .data-container h1{
+    
+    margin: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.data-container span {
+    font-weight: bold;
+}
+
+.data-container h1 {
+    font-size: 2em;
 }

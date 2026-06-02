@@ -19,7 +19,7 @@ export function PersonalInfoData({value, onChange, CreateInput, CreateButton, sa
 
           <div className="contacts">
             <CreateInput type="tel" value={value.phoneNumber} id="phoneNumber" placeholder="070211111" name="phoneNumber" 
-            className="telephone" onChange={onChange} text="Phone number"/>
+            className="phone-number" onChange={onChange} text="Phone number"/>
           
 
           <div className="email">
@@ -39,7 +39,7 @@ export function PersonalInfoData({value, onChange, CreateInput, CreateButton, sa
 
           <div className="buttons">
           < CreateButton onClick={save} />
-          < CreateButton text='Edit' onClick={onClick} />
+          < CreateButton text='Edit' onClick={onClick} className="editBtn" />
 
           </div>
 
